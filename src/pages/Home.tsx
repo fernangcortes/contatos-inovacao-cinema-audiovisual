@@ -146,7 +146,6 @@ export function Home() {
             setCategoryFilter('all');
             setTypeFilter('all');
             setBaseStatusFilter('all');
-            setActiveTab('contacts');
           }}
           onFilterCompleted={() => {
             setSearch('');
@@ -154,25 +153,21 @@ export function Home() {
             setCategoryFilter('all');
             setTypeFilter('all');
             setBaseStatusFilter('completed');
-            setActiveTab('contacts');
           }}
           onFilterPriority={(priority) => {
             setPriorityFilter(priority);
             setCategoryFilter('all');
             setTypeFilter('all');
-            setActiveTab('contacts');
           }}
           onFilterInstitutions={() => {
             setPriorityFilter('all');
             setCategoryFilter('all');
             setTypeFilter('instituicao');
-            setActiveTab('contacts');
           }}
           onFilterPeople={() => {
             setPriorityFilter('all');
             setCategoryFilter('all');
             setTypeFilter('pessoa');
-            setActiveTab('contacts');
           }}
           onFilterPending={() => {
             setSearch('');
@@ -180,30 +175,44 @@ export function Home() {
             setCategoryFilter('all');
             setTypeFilter('all');
             setBaseStatusFilter('pending');
-            setActiveTab('contacts');
           }}
         />
 
         {/* Tabs */}
         <Tabs value={activeTab} onValueChange={(value) => setActiveTab(value as 'meus-dados' | 'contacts' | 'steps' | 'map' | 'opportunities')} className="space-y-4">
           <TabsList className="bg-white border border-slate-200 p-1">
-            <TabsTrigger value="meus-dados" className="text-sm">
+            <TabsTrigger
+              value="meus-dados"
+              className="text-sm data-[state=active]:bg-violet-100 data-[state=active]:text-violet-700"
+            >
               <UserCircle className="w-4 h-4 mr-1" />
               Meus dados
             </TabsTrigger>
-            <TabsTrigger value="contacts" className="text-sm">
+            <TabsTrigger
+              value="contacts"
+              className="text-sm data-[state=active]:bg-slate-100 data-[state=active]:text-slate-700"
+            >
               <Users className="w-4 h-4 mr-1" />
               Contatos ({contacts.length})
             </TabsTrigger>
-            <TabsTrigger value="steps" className="text-sm">
+            <TabsTrigger
+              value="steps"
+              className="text-sm data-[state=active]:bg-amber-100 data-[state=active]:text-amber-700"
+            >
               <ListChecks className="w-4 h-4 mr-1" />
               Passo a Passo
             </TabsTrigger>
-            <TabsTrigger value="map" className="text-sm">
+            <TabsTrigger
+              value="map"
+              className="text-sm data-[state=active]:bg-emerald-100 data-[state=active]:text-emerald-700"
+            >
               <MapPin className="w-4 h-4 mr-1" />
               Mapa
             </TabsTrigger>
-            <TabsTrigger value="opportunities" className="text-sm">
+            <TabsTrigger
+              value="opportunities"
+              className="text-sm data-[state=active]:bg-sky-100 data-[state=active]:text-sky-700"
+            >
               <Megaphone className="w-4 h-4 mr-1" />
               Editais e Chamadas
             </TabsTrigger>
