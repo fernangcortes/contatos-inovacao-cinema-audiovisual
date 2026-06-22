@@ -139,7 +139,16 @@ export function Home() {
         {/* Stats */}
         <StatsHeader
           stats={stats}
-          activeFilter={baseStatusFilter === 'all' && priorityFilter === 'all' && typeFilter === 'all' ? 'total' : baseStatusFilter === 'completed' && priorityFilter === 'all' && typeFilter === 'all' ? 'completed' : baseStatusFilter === 'pending' && priorityFilter === 'all' && typeFilter === 'all' ? 'pending' : priorityFilter !== 'all' ? `priority-${priorityFilter}` : typeFilter === 'instituicao' ? 'institutions' : typeFilter === 'pessoa' ? 'people' : 'total'}
+          activeStatusFilter={
+            baseStatusFilter === 'all' ? 'total' :
+            baseStatusFilter === 'completed' ? 'completed' :
+            baseStatusFilter === 'pending' ? 'pending' : undefined
+          }
+          activeDetailFilter={
+            priorityFilter !== 'all' ? `priority-${priorityFilter}` as const :
+            typeFilter === 'instituicao' ? 'institutions' :
+            typeFilter === 'pessoa' ? 'people' : null
+          }
           onFilterTotal={() => {
             setSearch('');
             setPriorityFilter('all');
