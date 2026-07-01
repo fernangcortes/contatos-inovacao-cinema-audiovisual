@@ -1,6 +1,7 @@
 import type { Contact, Step } from '@/types/contact';
 import { contacts25art } from './contacts-25art';
 import { contactsGoias } from './contacts-goias';
+import { contactsPriority } from './contacts-priority';
 
 export const steps: Step[] = [
   {
@@ -103,7 +104,7 @@ const baseContacts: Contact[] = [
     location: {
       lat: -23.5474844,
       lng: -46.6359793,
-      city: 'SÃ£o Paulo',
+      city: 'São Paulo',
       state: 'SP',
       country: 'Brasil',
     },
@@ -129,9 +130,9 @@ const baseContacts: Contact[] = [
     ],
     tags: ['laboratório público', 'São Paulo', 'apps', 'RV', 'games', 'inovação'],
     location: {
-      lat: -23.5222986,
-      lng: -46.6963452,
-      city: 'SÃ£o Paulo',
+      lat: -23.5223479,
+      lng: -46.6961337,
+      city: 'São Paulo',
       state: 'SP',
       country: 'Brasil',
     },
@@ -157,9 +158,9 @@ const baseContacts: Contact[] = [
     ],
     tags: ['evento', 'América Latina', 'tecnologia', 'audiência', 'distribuição'],
     location: {
-      lat: -23.592,
-      lng: -46.646,
-      city: 'SÃ£o Paulo',
+      lat: -23.5916054,
+      lng: -46.6468201,
+      city: 'São Paulo',
       state: 'SP',
       country: 'Brasil',
     },
@@ -189,9 +190,9 @@ const baseContacts: Contact[] = [
     ],
     tags: ['diretor de inovação', 'São Paulo', 'LEIA', 'Spcine', 'políticas públicas'],
     location: {
-      lat: -23.5222986,
-      lng: -46.6963452,
-      city: 'SÃ£o Paulo',
+      lat: -23.5223479,
+      lng: -46.6961337,
+      city: 'São Paulo',
       state: 'SP',
       country: 'Brasil',
     },
@@ -222,7 +223,7 @@ const baseContacts: Contact[] = [
     location: {
       lat: -23.5474844,
       lng: -46.6359793,
-      city: 'SÃ£o Paulo',
+      city: 'São Paulo',
       state: 'SP',
       country: 'Brasil',
     },
@@ -249,9 +250,9 @@ const baseContacts: Contact[] = [
     ],
     tags: ['diretor', 'curador', 'evento', 'América Latina', 'tecnologia'],
     location: {
-      lat: -23.592,
-      lng: -46.646,
-      city: 'SÃ£o Paulo',
+      lat: -23.5916054,
+      lng: -46.6468201,
+      city: 'São Paulo',
       state: 'SP',
       country: 'Brasil',
     },
@@ -278,8 +279,8 @@ const baseContacts: Contact[] = [
     ],
     tags: ['laboratório', 'diversidade', 'tecnologia', 'inovação social'],
     location: {
-      lat: -22.9504452,
-      lng: -43.1806936,
+      lat: -22.95249,
+      lng: -43.195739,
       city: 'Rio de Janeiro',
       state: 'RJ',
       country: 'Brasil',
@@ -382,8 +383,8 @@ const baseContacts: Contact[] = [
     ],
     tags: ['evento', 'internacional', 'IA', 'São Paulo', 'networking'],
     location: {
-      lat: -23.5465,
-      lng: -46.6373,
+      lat: -23.5451082,
+      lng: -46.6629404,
       city: 'São Paulo',
       state: 'SP',
       country: 'Brasil',
@@ -434,8 +435,8 @@ const baseContacts: Contact[] = [
     ],
     tags: ['tecnologia', 'acessibilidade', 'distribuição', 'inovação'],
     location: {
-      lat: -23.5455,
-      lng: -46.6383,
+      lat: -23.5434931,
+      lng: -46.7330314,
       city: 'São Paulo',
       state: 'SP',
       country: 'Brasil',
@@ -465,8 +466,8 @@ const baseContacts: Contact[] = [
     ],
     tags: ['co-diretora', 'diversidade', 'tecnologia', 'inovação social'],
     location: {
-      lat: -22.9504452,
-      lng: -43.1806936,
+      lat: -22.95249,
+      lng: -43.195739,
       city: 'Rio de Janeiro',
       state: 'RJ',
       country: 'Brasil',
@@ -635,8 +636,8 @@ const baseContacts: Contact[] = [
     ],
     tags: ['co-fundador', 'startup', 'equipamentos', 'inclusão', '3D'],
     location: {
-      lat: -22.906847,
-      lng: -43.172896,
+      lat: -22.9459867,
+      lng: -43.5196984,
       city: 'Rio de Janeiro',
       state: 'RJ',
       country: 'Brasil',
@@ -822,8 +823,8 @@ const baseContacts: Contact[] = [
     ],
     tags: ['fomento', 'FSA', 'crédito', 'inovação', 'público'],
     location: {
-      lat: -22.90945,
-      lng: -43.18063,
+      lat: -22.9085235,
+      lng: -43.1799736,
       city: 'Rio de Janeiro',
       state: 'RJ',
       country: 'Brasil',
@@ -957,10 +958,10 @@ const baseContacts: Contact[] = [
     ],
     tags: ['curadora', 'Sundance', 'New Frontier', 'IA', 'imersivo'],
     location: {
-      lat: 34.0522,
-      lng: -118.2437,
-      city: 'Los Angeles',
-      state: 'CA',
+      lat: 40.6460921,
+      lng: -111.4979963,
+      city: 'Park City',
+      state: 'UT',
       country: 'EUA',
     },
     completed: false,
@@ -985,9 +986,10 @@ const baseContacts: Contact[] = [
     ],
     tags: ['curador', 'IDFA', 'documentário interativo', 'Holanda'],
     location: {
-      lat: 52.3696,
-      lng: 4.9061,
+      lat: 52.3730796,
+      lng: 4.8924534,
       city: 'Amsterdam',
+      state: 'Noord-Holland',
       country: 'Holanda',
     },
     completed: false,
@@ -1011,9 +1013,10 @@ const baseContacts: Contact[] = [
     ],
     tags: ['co-fundadora', 'fundo', '£150.000', 'documentário'],
     location: {
-      lat: 51.5094,
-      lng: -0.1258,
+      lat: 51.5074456,
+      lng: -0.1277653,
       city: 'Londres',
+      state: 'England',
       country: 'Reino Unido',
     },
     completed: false,
@@ -1092,9 +1095,9 @@ const baseContacts: Contact[] = [
     ],
     tags: ['CEO', 'drones', 'captação aérea', 'startup', 'mulher'],
     location: {
-      lat: -23.550520,
-      lng: -46.633308,
-      city: 'Sao Paulo',
+      lat: -23.5837,
+      lng: -46.6327408,
+      city: 'São Paulo',
       state: 'SP',
       country: 'Brasil',
     },
@@ -1562,11 +1565,11 @@ const baseContacts: Contact[] = [
     ],
     tags: ['arte generativa', 'NFT', 'Art Blocks', 'Processing', 'algoritmos', 'São Paulo'],
     location: {
-      lat: -23.5505,
-      lng: -46.6333,
-      city: 'São Paulo',
-      state: 'SP',
-      country: 'Brasil',
+      lat: 51.3157833,
+      lng: 9.4978479,
+      city: 'Kassel',
+      state: 'Hesse',
+      country: 'Alemanha',
     },
     source: '25ART-pesquisa-contatos-audiovisual-DF.md',
     sourceUrl: 'https://monicarizzolli.com.br/',
@@ -1631,8 +1634,8 @@ const baseContacts: Contact[] = [
     ],
     tags: ['videoarte', 'projeções urbanas', 'pioneira', 'arte e tecnologia', 'São Paulo'],
     location: {
-      lat: -23.5505,
-      lng: -46.6333,
+      lat: -23.5506507,
+      lng: -46.6333824,
       city: 'São Paulo',
       state: 'SP',
       country: 'Brasil',
@@ -1664,9 +1667,10 @@ const baseContacts: Contact[] = [
     ],
     tags: ['ANIAV', 'UPV Valencia', 'arte visual', 'Ibero-américa', 'Laboratorio de Luz', 'Espanha'],
     location: {
-      lat: 39.4699,
-      lng: -0.3763,
+      lat: 39.4697065,
+      lng: -0.3763353,
       city: 'Valencia',
+      state: 'Comunidad Valenciana',
       country: 'Espanha',
     },
     source: '25ART-pesquisa-contatos-audiovisual-DF.md',
@@ -1695,8 +1699,8 @@ const baseContacts: Contact[] = [
     ],
     tags: ['arte computacional', 'VR', 'BCI', 'robótica', 'EmMeio', 'São Paulo'],
     location: {
-      lat: -23.5505,
-      lng: -46.6333,
+      lat: -23.5458933,
+      lng: -46.6492387,
       city: 'São Paulo',
       state: 'SP',
       country: 'Brasil',
@@ -1980,4 +1984,4 @@ const baseContacts: Contact[] = [
   },
 ];
 
-export const contacts: Contact[] = [...baseContacts, ...contacts25art, ...contactsGoias];
+export const contacts: Contact[] = [...baseContacts, ...contacts25art, ...contactsGoias, ...contactsPriority];

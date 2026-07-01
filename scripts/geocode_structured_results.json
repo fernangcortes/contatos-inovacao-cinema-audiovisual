@@ -1,0 +1,67 @@
+[
+  {
+    "key": "cinehub",
+    "query": "{'street': 'Rua São Bento, 181', 'city': 'São Paulo', 'state': 'SP', 'country': 'Brasil', 'format': 'json', 'limit': 1, 'addressdetails': 1}",
+    "display_name": "181, Rua São Bento, Glicério, Sé, São Paulo, Região Sudeste, 01011-000, Brasil",
+    "lat": -23.5474844,
+    "lon": -46.6359793,
+    "city": "São Paulo",
+    "state": "SP",
+    "country": "Brasil",
+    "place_id": 8860983,
+    "osm_type": "node",
+    "osm_id": 5084749328
+  },
+  {
+    "key": "spcine-hq",
+    "query": "{'street': 'Rua Líbero Badaró, 293', 'city': 'São Paulo', 'state': 'SP', 'country': 'Brasil', 'format': 'json', 'limit': 1, 'addressdetails': 1}",
+    "display_name": "293, Rua Líbero Badaró, Glicério, Sé, São Paulo, Região Sudeste, 01009-000, Brasil",
+    "lat": -23.5469623,
+    "lon": -46.6366263,
+    "city": "São Paulo",
+    "state": "SP",
+    "country": "Brasil",
+    "place_id": 8905112,
+    "osm_type": "node",
+    "osm_id": 5079238893
+  },
+  {
+    "key": "phb-eletronica",
+    "query": "{'street': 'Rua São Bernardino, 12', 'city': 'São Paulo', 'state': 'SP', 'country': 'Brasil', 'format': 'json', 'limit': 1, 'addressdetails': 1}",
+    "display_name": "Rua São Bernardino, Jaguara, São Paulo, Região Sudeste, 05112-010, Brasil",
+    "lat": -23.5111861,
+    "lon": -46.7293897,
+    "city": "São Paulo",
+    "state": "SP",
+    "country": "Brasil",
+    "place_id": 9004455,
+    "osm_type": "way",
+    "osm_id": 268785892
+  },
+  {
+    "key": "tania-fraga",
+    "query": "{'street': 'Rua Dr. Cesário Mota Júnior, 454', 'city': 'São Paulo', 'state': 'SP', 'country': 'Brasil', 'format': 'json', 'limit': 1, 'addressdetails': 1}",
+    "display_name": "Edifício Guaira, 454, Rua Doutor Cesário Mota Júnior, Higienópolis, Consolação, São Paulo, Região Sudeste, 01221-020, Brasil",
+    "lat": -23.5458933,
+    "lon": -46.6492387,
+    "city": "São Paulo",
+    "state": "SP",
+    "country": "Brasil",
+    "place_id": 8981880,
+    "osm_type": "way",
+    "osm_id": 304078986
+  },
+  {
+    "key": "elpauer-comfama",
+    "query": "{'street': 'Carrera 45 #49A-16', 'city': 'Medellín', 'state': 'Antioquia', 'country': 'Colombia', 'format': 'json', 'limit': 1, 'addressdetails': 1}",
+    "display_name": "Carrera 45, Perpetuo Socorro, Comuna 10 - La Candelaria, Perímetro Urbano Medellín, Medellín, Valle de Aburrá, Antioquia, RAP del Agua y la Montaña, 050015, Colombia",
+    "lat": 6.2336241,
+    "lon": -75.5717507,
+    "city": "Medellín",
+    "state": "Antioquia",
+    "country": "Colombia",
+    "place_id": 308659099,
+    "osm_type": "way",
+    "osm_id": 99228909
+  }
+]
