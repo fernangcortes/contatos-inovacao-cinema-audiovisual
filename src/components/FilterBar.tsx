@@ -28,10 +28,18 @@ const categories: { value: Category | 'all'; label: string }[] = [
   { value: 'all', label: 'Todas' },
   { value: 'hub-coworking', label: 'Hub/Coworking' },
   { value: 'laboratorio-publico', label: 'Lab Público' },
+  { value: 'laboratorio-universidade', label: 'Lab Universitário' },
+  { value: 'universidade-ensino', label: 'Universidade/Ensino' },
+  { value: 'espaco-cultural', label: 'Espaço Cultural' },
+  { value: 'festival', label: 'Festival' },
+  { value: 'associacao', label: 'Associação' },
+  { value: 'produtora', label: 'Produtora' },
+  { value: 'plataforma-pesquisa', label: 'Plataforma de Pesquisa' },
   { value: 'aceleracao', label: 'Aceleração' },
   { value: 'evento-mercado', label: 'Evento/Mercado' },
   { value: 'fomento', label: 'Fomento' },
   { value: 'internacional', label: 'Internacional' },
+  { value: 'corporativo', label: 'Corporativo' },
   { value: 'pessoa', label: 'Pessoa' },
 ];
 

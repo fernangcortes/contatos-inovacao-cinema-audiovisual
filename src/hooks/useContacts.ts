@@ -17,7 +17,7 @@ export function useContacts() {
     [contacts, selectedId]
   );
 
-  const [activeTab, setActiveTab] = useState<'meus-dados' | 'contacts' | 'steps' | 'map' | 'opportunities'>('contacts');
+  const [activeTab, setActiveTab] = useState<'meus-dados' | 'contacts' | 'steps' | 'map' | 'opportunities' | 'events' | 'research'>('contacts');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
 
   const filteredContacts = useMemo(() => {

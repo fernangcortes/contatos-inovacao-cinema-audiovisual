@@ -21,6 +21,10 @@ const typeLabels: Record<OpportunityType | 'all', string> = {
   edital: 'Editais',
   chamada: 'Chamadas',
   evento: 'Eventos',
+  hackathon: 'Hackathons',
+  residencia: 'Residências',
+  premio: 'Prêmios',
+  mercado: 'Mercados',
   noticia: 'Notícias',
 };
 
@@ -41,6 +45,10 @@ const typeConfig: Record<OpportunityType, string> = {
   edital: 'bg-violet-100 text-violet-700',
   chamada: 'bg-sky-100 text-sky-700',
   evento: 'bg-rose-100 text-rose-700',
+  hackathon: 'bg-orange-100 text-orange-700',
+  residencia: 'bg-emerald-100 text-emerald-700',
+  premio: 'bg-amber-100 text-amber-700',
+  mercado: 'bg-indigo-100 text-indigo-700',
   noticia: 'bg-teal-100 text-teal-700',
 };
 

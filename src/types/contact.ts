@@ -1,8 +1,15 @@
 export type Priority = '1' | '2' | '3';
 
-export type Category = 
+export type Category =
   | 'hub-coworking'
   | 'laboratorio-publico'
+  | 'laboratorio-universidade'
+  | 'universidade-ensino'
+  | 'espaco-cultural'
+  | 'festival'
+  | 'associacao'
+  | 'produtora'
+  | 'plataforma-pesquisa'
   | 'aceleracao'
   | 'evento-mercado'
   | 'fomento'
@@ -48,6 +55,11 @@ export interface Contact {
   avatarScale?: number;
   completed: boolean;
   location?: ContactLocation;
+  source?: string;
+  sourceUrl?: string;
+  lastVerifiedAt?: string;
+  verificationNotes?: string;
+  mapSearchUrls?: { label: string; url: string }[];
 }
 
 export interface Step {

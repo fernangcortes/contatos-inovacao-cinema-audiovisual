@@ -10,14 +10,18 @@ import { UserProfileForm } from '@/components/UserProfileForm';
 import { StepsGuide } from '@/components/StepsGuide';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Toaster } from '@/components/ui/sonner';
-import { Film, Users, ListChecks, MapPin, Megaphone, Shield, PlusCircle, UserCircle } from 'lucide-react';
+import { Film, Users, ListChecks, MapPin, Megaphone, Shield, PlusCircle, UserCircle, CalendarDays, BookOpen } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { DEFAULT_TEMPLATE_VALUES, type TemplateValues } from '@/lib/utils';
 import { SuggestContactForm } from '@/components/SuggestContactForm';
 import { useSuggestions } from '@/hooks/useSuggestions';
-import { ContactMap } from '@/components/ContactMap';
+import { LayeredMap } from '@/components/LayeredMap';
 import { OpportunitiesList } from '@/components/OpportunitiesList';
 import { useOpportunities } from '@/hooks/useOpportunities';
+import { useEvents } from '@/hooks/useEvents';
+import { useResearchSources } from '@/hooks/useResearchSources';
+import { EventsList } from '@/components/EventsList';
+import { ResearchSourcesList } from '@/components/ResearchSourcesList';
 import type { Contact } from '@/types/contact';
 
 export function Home() {
@@ -57,6 +61,31 @@ export function Home() {
     setStatusFilter: setOpportunityStatusFilter,
     formatDate,
   } = useOpportunities();
+
+  const {
+    events,
+    search: eventSearch,
+    setSearch: setEventSearch,
+    typeFilter: eventTypeFilter,
+    setTypeFilter: setEventTypeFilter,
+    statusFilter: eventStatusFilter,
+    setStatusFilter: setEventStatusFilter,
+    scopeFilter: eventScopeFilter,
+    setScopeFilter: setEventScopeFilter,
+    formatDate: formatEventDate,
+  } = useEvents();
+
+  const {
+    sources,
+    search: sourceSearch,
+    setSearch: setSourceSearch,
+    typeFilter: sourceTypeFilter,
+    setTypeFilter: setSourceTypeFilter,
+    scopeFilter: sourceScopeFilter,
+    setScopeFilter: setSourceScopeFilter,
+    relevanceFilter: sourceRelevanceFilter,
+    setRelevanceFilter: setSourceRelevanceFilter,
+  } = useResearchSources();
 
   const { addSuggestion } = useSuggestions();
   const [suggestOpen, setSuggestOpen] = useState(false);
@@ -188,7 +217,7 @@ export function Home() {
         />
 
         {/* Tabs */}
-        <Tabs value={activeTab} onValueChange={(value) => setActiveTab(value as 'meus-dados' | 'contacts' | 'steps' | 'map' | 'opportunities')} className="space-y-4">
+        <Tabs value={activeTab} onValueChange={(value) => setActiveTab(value as 'meus-dados' | 'contacts' | 'steps' | 'map' | 'opportunities' | 'events' | 'research')} className="space-y-4">
           <TabsList className="bg-white border border-slate-200 p-1">
             <TabsTrigger
               value="meus-dados"
@@ -224,6 +253,20 @@ export function Home() {
             >
               <Megaphone className="w-4 h-4 mr-1" />
               Editais e Chamadas
+            </TabsTrigger>
+            <TabsTrigger
+              value="events"
+              className="text-sm data-[state=active]:bg-rose-100 data-[state=active]:text-rose-700"
+            >
+              <CalendarDays className="w-4 h-4 mr-1" />
+              Eventos
+            </TabsTrigger>
+            <TabsTrigger
+              value="research"
+              className="text-sm data-[state=active]:bg-amber-100 data-[state=active]:text-amber-700"
+            >
+              <BookOpen className="w-4 h-4 mr-1" />
+              Fontes
             </TabsTrigger>
           </TabsList>
 
@@ -292,7 +335,7 @@ export function Home() {
           </TabsContent>
 
           <TabsContent value="map">
-            <ContactMap contacts={contacts} onOpenContact={handleOpenContact} />
+            <LayeredMap contacts={contacts} events={events} onOpenContact={handleOpenContact} />
           </TabsContent>
 
           <TabsContent value="opportunities">
@@ -306,6 +349,36 @@ export function Home() {
               setStatusFilter={setOpportunityStatusFilter}
               formatDate={formatDate}
               onOpenContact={(id) => navigate(`/contato/${id}`)}
+            />
+          </TabsContent>
+
+          <TabsContent value="events">
+            <EventsList
+              events={events}
+              search={eventSearch}
+              setSearch={setEventSearch}
+              typeFilter={eventTypeFilter}
+              setTypeFilter={setEventTypeFilter}
+              statusFilter={eventStatusFilter}
+              setStatusFilter={setEventStatusFilter}
+              scopeFilter={eventScopeFilter}
+              setScopeFilter={setEventScopeFilter}
+              formatDate={formatEventDate}
+              onOpenContact={(id) => id && navigate(`/contato/${id}`)}
+            />
+          </TabsContent>
+
+          <TabsContent value="research">
+            <ResearchSourcesList
+              sources={sources}
+              search={sourceSearch}
+              setSearch={setSourceSearch}
+              typeFilter={sourceTypeFilter}
+              setTypeFilter={setSourceTypeFilter}
+              scopeFilter={sourceScopeFilter}
+              setScopeFilter={setSourceScopeFilter}
+              relevanceFilter={sourceRelevanceFilter}
+              setRelevanceFilter={setSourceRelevanceFilter}
             />
           </TabsContent>
         </Tabs>
